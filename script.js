@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🌾 No Farm 🌾',
                             promoEligible: true,
                             type: 'Hash',
-                            image: 'ProductOg1.jpg',
-                            video: 'VideoOg1.mp4',
+                           /*  image: 'ProductOg1.jpg',
+                            video: 'VideoOg1.mp4', */
                             description: '✨ Reflets dorés, texture brillante \n ⚡ La frappe qui surprend tout le monde \n 💥 Saveur propre, effet qui tape comme il faut',
                             tarifs: [
                                 { weight: '12g', price: 50.00 },
@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🌱 NoFarm 🌱',
                             promoEligible: true,
                             type: 'Filtrer',
-                            image: 'ProductTru.jpg',
-                            video: 'VideoTru.mp4',
+                           /*  image: 'ProductTru.jpg',
+                            video: 'VideoTru.mp4', */
                             description: '✨ Qualité filtrée premium\n 🌈 Saveurs sucrées & intenses\n 💨 Texture riche & puissante\n 🦄 Profil unique, haut de gamme ',
                             tarifs: [
                                 { weight: '7g', price: 50.00 },
@@ -183,8 +183,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🇺🇸 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
-                            image: 'ProductBis.jpg',
-                            video: 'VideoBis.mp4',
+                           /*  image: 'ProductBis.jpg',
+                            video: 'VideoBis.mp4', */
                             description: '✨ Qualité premium\n 🌿 Fleurs sélectionnées\n 💨 Texture résineuse, riche et puissante',
                             tarifs: [
                                 { weight: '4g', price: 50.00 },
@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🇺🇸 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
-                            image: 'ProductBis.jpg',
-                            video: 'VideoBis.mp4',
+                           /*  image: 'ProductBis.jpg',
+                            video: 'VideoBis.mp4', */
                             description: '🍬 Saveurs sucrées / fruitées \n ✨ Fleurs premium ultra colorées \n 💨 Effet puissant & agréable',
                             tarifs: [
                                 { weight: '4g', price: 50.00 },
@@ -258,8 +258,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     farm: '🏠 NO FARM',
                     promoEligible: false,
                     type: 'Mach',
-                    image: 'ProductSnow.png',
-                    video: 'VideoSnow.mp4',
+                   /*  image: 'ProductSnow.png',
+                    video: 'VideoSnow.mp4', */
                     description: '✨ Qualité premium ✨',
                     tarifs: [
                         { weight: '1g', price: 50.00 },
@@ -1203,21 +1203,6 @@ function renderProductListSimple(categoryId) {
     `;
     summaryContainer.innerHTML = summaryHTML;
 
-    // --- MODIFICATION POUR WHATSAPP DIRECT ---
-    const copyBtn = document.getElementById('copy-order-btn');
-    const contactBtn = document.getElementById('confirm-order-button');
-
-    // 1. On CACHE le bouton "Copier" car il ne sert plus
-    if(copyBtn) copyBtn.style.display = 'none';
-
-    // 2. On configure le bouton "Confirmer" pour être actif tout de suite
-    if(contactBtn) {
-        contactBtn.classList.remove('secondary-action-btn'); // Enlève le gris
-        contactBtn.classList.add('main-action-btn');      // Met le rouge (ou couleur principale)
-        contactBtn.disabled = false;                      // Active le clic
-        contactBtn.innerHTML = 'CONFIRMER SUR WHATSAPP 📞'; // Change le texte
-    }
-
     showPage('page-confirmation');
 }
     // Affiche la page de contact (inchangé)
@@ -1418,13 +1403,15 @@ function renderProductListSimple(categoryId) {
         message += `*💰 TOTAL: ${totalPrice.toFixed(2)}€*\n`;
     }
 
-    // Pied de page
-    message += `\n📍 Livraison à convenir\n`;
-    message += `💳 Paiement: ${paymentMethod}`;
+  // Pied de page
+    const selectedTimeslot = document.getElementById('order-timeslot').value;
+    
+    message += `\n📍 Livraison : Département 06\n`;
+    message += `⏰ Tournée choisie : Départ ${selectedTimeslot}\n`;
+    message += `💳 Paiement : ${paymentMethod}`;
 
     return message;
 }
-
     // --- NOUVELLE FONCTION POUR COPIER DANS LE PRESSE-PAPIERS ---
     function copyToClipboard(text) {
         if (navigator.clipboard) { // API moderne et sécurisée
@@ -1524,25 +1511,40 @@ function renderProductListSimple(categoryId) {
     document.body.addEventListener('click', async function (e) {
                 const target = e.target;
 
-        if (target.closest('#copy-order-btn')) {
+      // Validation via WhatsApp (Injection directe URL)
+        if (target.closest('#confirm-whatsapp')) {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            if (totalItems === 0) return showNotification('❌ Panier vide');
+
+            const myPhoneNumber = '33751750853'; 
             let message = formatOrderMessage();
-            message = message.replace(/\*/g, '');
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${encodedMessage}`;
+            tg.openLink(whatsappUrl);
+        }
 
+        // Validation via Snapchat (Copie + Redirection différée)
+        if (target.closest('#confirm-snapchat')) {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            if (totalItems === 0) return showNotification('❌ Panier vide');
+
+            const snapchatUrl = 'https://snapchat.com/t/bLK8Sa5n';
+            let message = formatOrderMessage();
+            message = message.replace(/\*/g, ''); // Nettoyage de la syntaxe Markdown inutile sur Snap
+            
+            // On copie le texte dans le presse-papiers
             copyToClipboard(message);
-
-            // --- AJOUT : Inverser les styles des boutons ---
-            const copyBtn = document.getElementById('copy-order-btn');
-            const contactBtn = document.getElementById('confirm-order-button');
-
-            // Copier devient Gris (secondary)
-            copyBtn.classList.remove('main-action-btn');
-            copyBtn.classList.add('secondary-action-btn');
-
-            // Contacter devient Rouge (main) et est activé
-            contactBtn.classList.remove('secondary-action-btn');
-            contactBtn.classList.add('main-action-btn');
-            contactBtn.disabled = false; // <-- ON DÉVERROUILLE LE BOUTON
-            return; // On s'arrête là
+            
+            // On force un changement d'UI pour guider l'utilisateur
+            const snapBtn = target.closest('#confirm-snapchat');
+            const originalText = snapBtn.innerHTML;
+            snapBtn.innerHTML = 'Copié ! Ouverture...';
+            
+            // Délai de 1.5s pour laisser l'utilisateur lire la notification avant d'ouvrir Snap
+            setTimeout(() => {
+                tg.openLink(snapchatUrl);
+                snapBtn.innerHTML = originalText;
+            }, 1500);
         }
 
         // Gère l'accordéon sur la page contact
@@ -1738,24 +1740,7 @@ function renderProductListSimple(categoryId) {
             renderProductPage(targetId);
             return;
         }
-          // Clic sur "Confirmer la commande" (VERSION WHATSAPP DIRECT)
-    if (target.closest('#confirm-order-button')) {
-
-        // 1. TON NUMÉRO WHATSAPP (Format international sans le +)
-        const myPhoneNumber = '33751750853'; 
-        
-        // 2. On prépare le message
-        let message = formatOrderMessage();
-        
-        // 3. On encode le message pour qu'il passe dans une URL
-        const encodedMessage = encodeURIComponent(message);
-        
-        // 4. On crée le lien magique WhatsApp
-        const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${encodedMessage}`;
-
-        // 5. On ouvre WhatsApp
-        tg.openLink(whatsappUrl);
-    }
+  
 
     });
 

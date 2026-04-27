@@ -368,6 +368,7 @@
             width: 100%;
             height: 120px;
             object-fit: cover;
+            display: none;
         }
 
         .product-card .info {
@@ -802,7 +803,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            object-fit: cover;
+            object-fit: initial;
             z-index: 1;
             filter: brightness(0.85);
             transition: transform 0.3s ease;
@@ -1007,88 +1008,67 @@
         <div class="page-content">
             <img src="LogoReel.png" alt="Logo" class="contact-logo">
             <div class="contact-card">
-                <div class="accordion-container">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <img src="InfoReseaux.png" class="ImgReseaux" alt="">
-                            <span style="font-weight: bold; color: #333;">NOS RÉSEAUX 🌐</span>
-                            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-                            </svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p style="text-align: center; color: white; line-height: 1.8;">
-                                🛍️ <strong>Whatsapp</strong> : Passer commande<br>
-                                🍽️ <strong>Telegram</strong> : Voir le Menu / Produits<br>
-                                🔐 <strong>Luffa</strong> : Contact Secours<br><br>
-                                
-                                📲 <strong>Disponibles sur :</strong> Luffa, Potato & Telegram<br>
-                                💬 Pour toute info, n’hésitez pas à nous contacter<br><br>
-                                
-                                <span style="color: #ff5252; font-weight: bold;">✅ Commandes uniquement sur WhatsApp</span>
-                            </p>
-                        </div>
-                    </div>
+            <div class="accordion-container">
+    
+   <div class="accordion-item">
+        <button class="accordion-header">
+            <img src="InfoReseaux.png" class="ImgReseaux" alt="">
+            <span style="font-weight: bold; color: #333;">NOS RÉSEAUX 🌐</span>
+            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+            </svg>
+        </button>
+        <div class="accordion-content">
+            <p style="text-align: center; color: white; line-height: 1.8;">
+                📞 <strong>WhatsApp</strong> : <a href="https://wa.me/33751750853" style="color: #27ff78; text-decoration: none;">Clique ici</a><br>
+                👻 <strong>Snapchat</strong> : <a href="https://snapchat.com/t/bLK8Sa5n" style="color: #fff108; text-decoration: none;">Clique ici</a><br>
+                💬 <strong>Telegram (Secours)</strong> : <a href="https://t.me/+LjJqBQabuIk5OTI0" style="color: #2a67ee; text-decoration: none;">Rejoindre le canal</a><br><br>
+                
+                <span style="color: #ff5252; font-weight: bold;">✅ Commandes uniquement sur WhatsApp et Snapchat</span>
+            </p>
+        </div>
+    </div>
 
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <img src="InfoLivraison.png" class="ImgReseaux" alt="">
-                            <span style="font-weight: bold; color: #333;">LIVRAISON 🚀</span>
-                            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-                            </svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p style="text-align: center; color: white; line-height: 1.6;">
-                                <strong>🚚 Bienvenue dans le meilleur service de livraison du 84</strong><br><br>
-                                🌿 Large choix de variétés<br>
-                                ✅ Qualité irréprochable<br>
-                                ⏱ Livraison rapide et discrète<br><br>
-                                
-                                🚚 Vos produits préférés directement chez vous<br><br>
-                                
-                                <span style="color: #ff5252; font-weight: bold;">⚠️ Prise de commande uniquement sur WhatsApp</span>
-                            </p>
-                        </div>
-                    </div>
-                
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <img src="InfoHoraire.png" class="ImgReseaux" alt="">
-                            <span style="font-weight: bold; color: #333;">HORAIRES ⏰</span>
-                            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-                            </svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p style="text-align: center; color: white; line-height: 1.8;">
-                                <strong>⏰ Horaires de livraison</strong><br><br>
-                                • Lundi → Jeudi : 12h – 00h<br>
-                                • Vendredi → Samedi : 12h – 01h<br>
-                                • Dimanche : 12h – 22h
-                            </p>
-                        </div>
-                    </div>
-                
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <img src="InfoMeetUp.png" class="ImgReseaux" alt="">
-                            <span style="font-weight: bold; color: #333;">POINT DE RDV 📍</span>
-                            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-                            </svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p style="text-align: center; color: white; line-height: 1.6;">
-                                <strong>📍 Une seule adresse</strong><br>
-                                Rue Marivaux – 84100 Orange ✅<br><br>
-                                🕒 <strong>OUVERT 24/7</strong><br><br>
-                                <i>"Passez quand vous voulez, repartez avec ce qu’il vous faut"</i> 🚶‍♂️📦
-                            </p>
-                        </div>
-                    </div>
-                
-                </div>
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <img src="InfoLivraison.png" class="ImgReseaux" alt="">
+            <span style="font-weight: bold; color: #333;">LIVRAISON 🚀</span>
+            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+            </svg>
+        </button>
+        <div class="accordion-content">
+            <p style="text-align: center; color: white; line-height: 1.6;">
+                📍 <strong>Zone de livraison :</strong> Tout le département 06<br><br>
+                💰 <strong>Minimum de commande :</strong> 50€<br><br>
+                <span style="color: #ff5252; font-weight: bold;">⚠️ Prise de commande uniquement sur WhatsApp et Snapchat</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">
+            <img src="InfoHoraire.png" class="ImgReseaux" alt="">
+            <span style="font-weight: bold; color: #333;">HORAIRES & TOURNÉES ⏰</span>
+            <svg class="accordion-arrow" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+            </svg>
+        </button>
+        <div class="accordion-content">
+            <p style="text-align: center; color: white; line-height: 1.8;">
+                🕒 <strong>Plage de livraison :</strong> 12h00 à 00h00<br>
+                📱 <strong>Prise de commande :</strong> 24h/24 & 7j/7<br><br>
+                <strong>🚚 4 Départs de tournées :</strong><br>
+                • 12h00<br>
+                • 16h00<br>
+                • 19h00<br>
+                • 22h30<br><br>
+                <em>Sélectionnez votre créneau lors de la validation du panier.</em>
+            </p>
+        </div>
+    </div>
+
+</div>
             </div>
         </div>
     </div>
@@ -1306,14 +1286,25 @@
                     <button id="remove-promo-btn">×</button>
                 </div>
             </div>
+            <div class="timeslot-selector" style="margin-top: 20px; padding: 15px 0; border-bottom: 1px solid var(--tertiary-bg-color);">
+    <h4>⏰ Choix de la tournée</h4>
+    <div class="filter-select-wrapper" style="margin-top: 10px;">
+        <select id="order-timeslot" style="width: 100%; text-align: center; background: var(--secondary-bg-color); color: white; padding: 15px; border-radius: 10px; border: none;">
+            <option value="12h00">🚚 Départ 12h00</option>
+            <option value="16h00">🚚 Départ 16h00</option>
+            <option value="19h00">🚚 Départ 19h00</option>
+            <option value="22h30">🚚 Départ 22h30</option>
+        </select>
+    </div>
+</div>
 
-            <div class="payment-selector">
+          <!--   <div class="payment-selector">
                 <h4>Paiement</h4>
                 <div class="payment-options">
                     <button class="payment-btn active" data-method="Espèce">💵 Espèce</button>
                     <button class="payment-btn" data-method="Crypto">₿ Crypto</button>
                 </div>
-            </div>
+            </div> -->
 
             <div class="cart-total" id="confirmation-summary">
             </div>
@@ -1322,17 +1313,16 @@
                 <span id="confirmation-final-price">0.00€</span>
             </div> -->
         </div>
-        <div class="cart-actions">
-
-            <button id="confirmation-modify-order" class="secondary-action-btn">✏️ Modifier</button>
-
-            <p class="confirmation-instructions">
-                Cliquez pour copier votre commande, puis contactez-nous :
-            </p>
-            <button id="confirm-order-button" class="secondary-action-btn telegram-button" disabled>
-                <span></span>
-            </button>
-        </div>
+      <div class="cart-actions">
+    <button id="confirmation-modify-order" class="secondary-action-btn">✏️ Modifier le panier</button>
+    <p class="confirmation-instructions" style="text-align: center; font-size: 0.9rem; margin-top: 10px;">
+        Choisissez votre réseau pour envoyer la commande :
+    </p>
+    <div style="display: flex; gap: 10px; width: 100%;">
+        <button id="confirm-whatsapp" class="main-action-btn" style="flex: 1; background: #25D366; border: 1px solid #1da851;">WhatsApp 📞</button>
+        <button id="confirm-snapchat" class="main-action-btn" style="flex: 1; background: #FFFC00; color: black; border: 1px solid #d4d100;">Snapchat 👻</button>
+    </div>
+</div>
     </div>
 
     <div id="page-avis" class="page">
