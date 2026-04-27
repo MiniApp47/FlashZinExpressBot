@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         {
                             id: '🍫✨ JAUNE MOUSSEUX ✨',
                             flag: '🇪🇸',
-                            name: '🍫✨ JAUNE MOUSSEUX ✨',
+                            name: '✨ MOUSSE ✨',
                             farm: '🌾 No Farm 🌾',
                             promoEligible: true,
                             type: 'Hash',
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
                           {
                             id: '🦄 FILTRÉ UNICORN RUNTZ 🌈',
                             flag: '💎',
-                            name: '🦄🦄 FILTRÉ UNICORN RUNTZ 🌈',
+                            name: '🦄 UNICORN RUNTZ 🌈',
                             farm: '🌱 NoFarm 🌱',
                             promoEligible: true,
                             type: 'Filtrer',
