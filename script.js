@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🌾 No Farm 🌾',
                             promoEligible: true,
                             type: 'Hash',
-                           /*  image: 'ProductOg1.jpg',
-                            video: 'VideoOg1.mp4', */
+                            image: 'ProductOg1.jpg',
+                            video: 'VideoOg1.mp4',
                             description: '✨ Reflets dorés, texture brillante \n ⚡ La frappe qui surprend tout le monde \n 💥 Saveur propre, effet qui tape comme il faut',
                             tarifs: [
                                 { weight: '12g', price: 50.00 },
@@ -109,14 +109,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     badgeText: '',
                     products: [
                           {
+                            id: '🦄 slurricane  🌈',
+                            flag: '💎',
+                            name: 'SLURRICANE 🫐',
+                            farm: '🔗 LaSource 🔗',
+                            promoEligible: true,
+                            type: 'Filtrer',
+                            image: 'ProductSlu.jpg',
+                            video: 'VideoSlu.mp4',
+                            description: '✨ Qualité filtrée premium\n 🌈 Saveurs sucrées & intenses\n 💨 Texture riche & puissante\n 🦄 Profil unique, haut de gamme ',
+                            tarifs: [
+                                { weight: '7g', price: 50.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 250.00 },
+                                { weight: '100g', price: 450.00 },
+                            ]
+                        },
+                          {
+                            id: '🦄 fruit Spirit  🌈',
+                            flag: '💎',
+                            name: 'FRUIT SPIRIT 🍭',
+                            farm: '🔗 LaSource 🔗',
+                            promoEligible: true,
+                            type: 'Filtrer',
+                            image: 'ProductSpi.jpg',
+                            video: 'VideoSpi.mp4',
+                            description: '✨ Qualité filtrée premium\n 🌈 Saveurs sucrées & intenses\n 💨 Texture riche & puissante\n 🦄 Profil unique, haut de gamme ',
+                            tarifs: [
+                                { weight: '7g', price: 50.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 250.00 },
+                                { weight: '100g', price: 450.00 },
+                            ]
+                        },
+                          {
                             id: '🦄 FILTRÉ UNICORN RUNTZ 🌈',
                             flag: '💎',
                             name: '🦄 UNICORN RUNTZ 🌈',
                             farm: '🌱 NoFarm 🌱',
                             promoEligible: true,
                             type: 'Filtrer',
-                           /*  image: 'ProductTru.jpg',
-                            video: 'VideoTru.mp4', */
+                            image: 'ProductUni.jpg',
+                            video: 'VideoUni.mp4',
                             description: '✨ Qualité filtrée premium\n 🌈 Saveurs sucrées & intenses\n 💨 Texture riche & puissante\n 🦄 Profil unique, haut de gamme ',
                             tarifs: [
                                 { weight: '7g', price: 50.00 },
@@ -134,6 +168,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
+                        {
+                            id: 'mandarina 🌟',
+                            flag: '💎',
+                            name: 'Olive mandarina 🍊',
+                            farm: '🔥 NO FARM 🔥',
+                            promoEligible: true,
+                            type: 'Filtrer',
+                            image: 'ProductMa.jpg',
+                            video: 'VideoMa.mp4',
+                            description: '🚨 Drop exclusif janvier 2026 🚨 \n\n 🔥 STATIC RED VELVET 135-73U - une expérience inédite dans le monde du cannabis. Pour les connaisseurs, chaque gramme est une œuvre d’art soigneusement cultivée pour des arômes et effets d’exception.\n\n 🔒 Stocks limités, ne manquez pas votre chance de découvrir cette variété unique ! ',
+                            tarifs: [
+                                { weight: '10g', price: 70.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 250.00 },
+                                { weight: '100g', price: 420.00 },
+                            ]
+                        },
                     /*    {
                             id: 'STATIC RED VELVET 🌟',
                             flag: '💎',
@@ -176,6 +227,40 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
+                         {
+                            id: 'Purple',
+                            flag: '🇺🇸',
+                            name: 'Purple ☂️',
+                            farm: '🇺🇸 NO FARM',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductP.jpg',
+                            video: 'VideoP.mov',
+                            description: '',
+                            tarifs: [
+                                { weight: '4g', price: 50.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 350.00 },
+                                { weight: '100g', price: 600.00 },
+                            ]
+                        },
+                         {
+                            id: 'Chantilly',
+                            flag: '🇺🇸',
+                            name: 'Chantilly 🍦',
+                            farm: '🇺🇸 NO FARM',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductCh.jpg',
+                            video: 'VideoCh.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '4g', price: 50.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 350.00 },
+                                { weight: '100g', price: 600.00 },
+                            ]
+                        },
                          {
                             id: '💎 24K GOLD 💎',
                             flag: '🇺🇸',
@@ -220,6 +305,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
+                        {
+                            id: 'Banana Kush',
+                            flag: '🇺🇸',
+                            name: 'Banana Kush 🍌',
+                            farm: '🌿 NO FARM',
+                            promoEligible: false,
+                            type: 'Amne',
+                            image: 'ProductB.jpg',
+                            video: 'VideoB.mov',
+                            description: '',
+                            tarifs: [
+                               { weight: '10g', price: 80.00 },
+                               { weight: '25g', price: 160.00 },
+                               { weight: '50g', price: 280.00 },
+                               { weight: '100g', price: 500.00 },
+                           ]
+                        },
                        /*  {
                             id: 'Amnesia premium',
                             flag: '🇺🇸',
