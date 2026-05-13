@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             video: 'VideoMa.mp4',
                             description: '🚨 Drop exclusif janvier 2026 🚨 \n\n 🔥 STATIC RED VELVET 135-73U - une expérience inédite dans le monde du cannabis. Pour les connaisseurs, chaque gramme est une œuvre d’art soigneusement cultivée pour des arômes et effets d’exception.\n\n 🔒 Stocks limités, ne manquez pas votre chance de découvrir cette variété unique ! ',
                             tarifs: [
-                                { weight: '10g', price: 70.00 },
+                                { weight: '10g', price: 120.00 },
                                 { weight: '25g', price: 150.00 },
                                 { weight: '50g', price: 250.00 },
                                 { weight: '100g', price: 420.00 },
