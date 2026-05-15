@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
-                        {
+                       /*  {
                             id: '🍫✨ JAUNE MOUSSEUX ✨',
                             flag: '🇪🇸',
                             name: '✨ MOUSSE ✨',
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 160.00 },
                                 { weight: '100g', price: 300.00 },
                             ]
-                        },
+                        }, */
                     
                     ]
                 },
@@ -108,6 +108,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
+                          {
+                            id: 'Forbidden Fruit Frozen 🍫🧽',
+                            flag: '💎',
+                            name: 'Forbidden Fruit 🍫🧽',
+                            farm: '🌱 NoFarm 🌱',
+                            promoEligible: true,
+                            type: 'Filtrer',
+                            image: 'ProductFF.jpg',
+                            video: 'VideoFF.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '12g', price: 50.00 },
+                                { weight: '25g', price: 90.00 },
+                                { weight: '50g', price: 160.00 },
+                                { weight: '100g', price: 300.00 },
+                            ]
+                        },
                           {
                             id: '🦄 slurricane  🌈',
                             flag: '💎',
@@ -125,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '100g', price: 450.00 },
                             ]
                         },
-                          {
+                         /*  {
                             id: '🦄 fruit Spirit  🌈',
                             flag: '💎',
                             name: 'FRUIT SPIRIT 🍭',
@@ -158,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 250.00 },
                                 { weight: '100g', price: 450.00 },
                             ]
-                        },
+                        }, */
                      
                     ]
                 },
