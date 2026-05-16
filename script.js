@@ -96,20 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '100g', price: 300.00 },
                             ]
                         }, */
-                    
-                    ]
-                },
-
-           
-                // 5. Filtrer  ❄️
-                {
-                    id: 'FILTRER',
-                    name: 'FILTRER 🔎',
-                    image: '',
-                    badgeText: '',
-                    products: [
-                          {
-                            id: 'Forbidden Fruit Frozen 🍫🧽',
+                      {
+                            id: 'Forbidden Fruit 🍫🧽',
                             flag: '💎',
                             name: 'Forbidden Fruit 🍫🧽',
                             farm: '🌱 NoFarm 🌱',
@@ -125,6 +113,17 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '100g', price: 300.00 },
                             ]
                         },
+                    ]
+                },
+
+           
+                // 5. Filtrer  ❄️
+                {
+                    id: 'FILTRER',
+                    name: 'FILTRER 🔎',
+                    image: '',
+                    badgeText: '',
+                    products: [
                           {
                             id: '🦄 slurricane  🌈',
                             flag: '💎',
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             promoEligible: true,
                             type: 'Filtrer',
                             image: 'ProductSlu.jpg',
-                            video: 'VideoSlu.mp4',
+                            video: 'VideoSlu.mov',
                             description: '✨ Qualité filtrée premium\n 🌈 Saveurs sucrées & intenses\n 💨 Texture riche & puissante\n 🦄 Profil unique, haut de gamme ',
                             tarifs: [
                                 { weight: '7g', price: 50.00 },
@@ -196,10 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             video: 'VideoMa.mp4',
                             description: '🚨 Drop exclusif janvier 2026 🚨 \n\n 🔥 STATIC RED VELVET 135-73U - une expérience inédite dans le monde du cannabis. Pour les connaisseurs, chaque gramme est une œuvre d’art soigneusement cultivée pour des arômes et effets d’exception.\n\n 🔒 Stocks limités, ne manquez pas votre chance de découvrir cette variété unique ! ',
                             tarifs: [
-                                { weight: '10g', price: 120.00 },
-                                { weight: '25g', price: 150.00 },
-                                { weight: '50g', price: 250.00 },
-                                { weight: '100g', price: 420.00 },
+                                { weight: '5g', price: 60.00 },
+                                { weight: '10g', price: 100.00 },
+                                { weight: '25g', price: 240.00 },
                             ]
                         },
                     /*    {
@@ -244,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '',
                     products: [
-                         {
+                       /*   {
                             id: 'Purple',
                             flag: '🇺🇸',
                             name: 'Purple ☂️',
@@ -277,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 350.00 },
                                 { weight: '100g', price: 600.00 },
                             ]
-                        },
+                        }, */
                          {
                             id: '💎 24K GOLD 💎',
                             flag: '🇺🇸',
@@ -316,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     ]
                 },
                    // --- Sous-Catégorie : CALI USA 🇺🇸 (J'y ai mis tes Wizard Trees) ---
-                   {
+                   /* {
                     id: 'Espagnol',
                     name: 'Espagnol 🇪🇸',
                     image: '',
@@ -339,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                { weight: '100g', price: 500.00 },
                            ]
                         },
-                       /*  {
+                        {
                             id: 'Amnesia premium',
                             flag: '🇺🇸',
                             name: 'Amnesia premium 🏆',
@@ -355,9 +353,9 @@ document.addEventListener('DOMContentLoaded', function () {
                                { weight: '50g', price: 280.00 },
                                { weight: '100g', price: 500.00 },
                            ]
-                        }, */
+                        },
                     ]
-                }
+                } */
               
             ]
         },
@@ -382,8 +380,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     description: '✨ Qualité premium ✨',
                     tarifs: [
                         { weight: '1g', price: 50.00 },
-                        { weight: '5g', price: 200.00 },
-                        { weight: '10g', price: 350.00 },
+                        { weight: '5g', price: 220.00 },
+                        { weight: '10g', price: 400.00 },
                     ]
                 },
             ]
