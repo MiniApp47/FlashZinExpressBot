@@ -283,8 +283,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🇺🇸 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
-                           /*  image: 'ProductBis.jpg',
-                            video: 'VideoBis.mp4', */
+                            image: 'Product24.jpg',
+                            video: 'Video24.mov',
                             description: '✨ Qualité premium\n 🌿 Fleurs sélectionnées\n 💨 Texture résineuse, riche et puissante',
                             tarifs: [
                                 { weight: '4g', price: 50.00 },
@@ -300,8 +300,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             farm: '🇺🇸 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
-                           /*  image: 'ProductBis.jpg',
-                            video: 'VideoBis.mp4', */
+                            image: 'ProductRu.jpg',
+                             /*video: 'VideoBis.mp4', */
                             description: '🍬 Saveurs sucrées / fruitées \n ✨ Fleurs premium ultra colorées \n 💨 Effet puissant & agréable',
                             tarifs: [
                                 { weight: '4g', price: 50.00 },
@@ -375,8 +375,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     farm: '🏠 NO FARM',
                     promoEligible: false,
                     type: 'Mach',
-                   /*  image: 'ProductSnow.png',
-                    video: 'VideoSnow.mp4', */
+                    image: 'ProductSnow.png',
+                    video: 'VideoSnow.mov',
                     description: '✨ Qualité premium ✨',
                     tarifs: [
                         { weight: '1g', price: 50.00 },
