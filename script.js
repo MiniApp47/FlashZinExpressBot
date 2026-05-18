@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             promoEligible: true,
                             type: 'Filtrer',
                             image: 'ProductFF.jpg',
-                            video: 'VideoFF.mp4',
+                            video: 'VideoFF.mov',
                             description: '',
                             tarifs: [
                                 { weight: '12g', price: 50.00 },
