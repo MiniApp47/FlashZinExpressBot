@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         if (loader) {
             loader.style.opacity = "0"; // Effet de fondu
-            loader.style.transition = "opacity 0.5s ease";
+            loader.style.transition = "opacity 1s ease";
 
             setTimeout(() => {
                 loader.style.display = "none";
