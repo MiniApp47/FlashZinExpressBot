@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 100);
 
-    // 2. On attend la fin de l'animation (2.5 secondes ici) pour cacher le loader
+  // 2. On attend la fin de l'animation (2.5 secondes ici) pour cacher le loader
     setTimeout(() => {
         if (loader) {
             loader.style.opacity = "0"; // Effet de fondu
@@ -27,11 +27,44 @@ document.addEventListener('DOMContentLoaded', function () {
                 loader.classList.remove('active');
                 // Affiche la page Home par défaut
                 document.getElementById('page-home').classList.add('active');
+                
+                // --- NOUVEAU : POP-UP PROMO GÉANT (INJECTION DYNAMIQUE) ---
+                const promoModalHTML = `
+                <div id="promo-modal" style="display:flex; flex-direction:column; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 99999; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.4s ease;">
+                    <div style="background: linear-gradient(145deg, #7d1a03, #000); border: 2px solid #ef233c; border-radius: 20px; padding: 30px; text-align: center; max-width: 85%; box-shadow: 0px 0px 30px rgba(239, 35, 60, 0.4); position: relative; transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <span id="close-promo-modal" style="position: absolute; top: 5px; right: 15px; font-size: 30px; color: #8e8e93; cursor: pointer; font-weight: bold;">&times;</span>
+                        <div style="font-size: 50px; margin-bottom: 10px;">🎁</div>
+                        <h2 style="color: white; font-family: 'Impact', fantasy; font-size: 2rem; margin: 0 0 10px 0; letter-spacing: 1px;">OFFRE SPÉCIALE</h2>
+                        <div style="width: 50px; height: 3px; background: #ef233c; margin: 0 auto 15px auto;"></div>
+                        <p style="color: #fff; font-size: 1.1rem; font-weight: 500; line-height: 1.4; margin: 0;">Pour chaque <span style="color: #ef233c; font-size: 1.4rem; font-weight: bold;">100€</span> de commande<br><span style="font-size: 0.85rem; color: #8e8e93;">(sur n'importe quel produit)</span><br><br><span style="color: #34c759; font-size: 1.5rem; font-weight: bold; font-family: Marker Felt, fantasy;">= UN 10 OFFERT !</span></p>
+                        <button id="btn-promo-ok" style="margin-top: 25px; background: #ef233c; color: white; border: none; padding: 12px 30px; border-radius: 10px; font-weight: bold; font-size: 1.1rem; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(239,35,60,0.4);">C'EST NOTÉ 🚀</button>
+                    </div>
+                </div>`;
+                
+                document.body.insertAdjacentHTML('beforeend', promoModalHTML);
+                const promoModal = document.getElementById('promo-modal');
+                const modalBox = promoModal.querySelector('div');
+                
+                // Animation d'entrée fluide
+                setTimeout(() => {
+                    promoModal.style.opacity = "1";
+                    modalBox.style.transform = "scale(1)";
+                }, 100);
+
+                // Fonction de fermeture avec nettoyage du code (optimisation mémoire)
+                const closeModal = () => {
+                    promoModal.style.opacity = "0";
+                    modalBox.style.transform = "scale(0.8)";
+                    setTimeout(() => promoModal.remove(), 400); // Supprime l'élément du DOM après l'animation
+                };
+
+                // Écouteurs pour fermer (bouton X ou bouton "C'est noté")
+                document.getElementById('close-promo-modal').onclick = closeModal;
+                document.getElementById('btn-promo-ok').onclick = closeModal;
+                
             }, 500); // Attend la fin du fondu
         }
     }, 2600); // 2600ms = 2.5s d'animation + 0.1s de délai
-
-
 
     // --- CONFIGURATION DES LIENS DE CONTACT ---
     const contactLinks = [
