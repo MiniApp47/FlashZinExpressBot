@@ -270,11 +270,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
             farms: [
                 {
-                    id: 'USA',
-                    name: 'Cali USA 🇺🇸',
+                    id: 'hollandaise',
+                    name: 'Cali Hollandaise 🇳🇱',
                     image: '',
                     badgeText: '',
                     products: [
+                          {
+                            id: 'Amnesia 🌲',
+                            flag: '🇳🇱',
+                            name: 'Amnesia 🌲',
+                            farm: '🇳🇱 NO FARM',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductA.jpg',
+                            video: 'VideoA.mov',
+                            description: '',
+                            tarifs: [
+                                { weight: '4g', price: 50.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 350.00 },
+                                { weight: '100g', price: 600.00 },
+                            ]
+                        },
                        /*   {
                             id: 'Purple',
                             flag: '🇺🇸',
@@ -311,9 +328,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         }, */
                          {
                             id: '💎 24K GOLD 💎',
-                            flag: '🇺🇸',
+                            flag: '🇳🇱',
                             name: '💎 24K GOLD 💎',
-                            farm: '🇺🇸 NO FARM',
+                            farm: '🇳🇱 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
                             image: 'Product24.jpg',
@@ -328,9 +345,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         },
                          {
                             id: '🌈 RUNTZ 🌈',
-                            flag: '🇺🇸',
+                            flag: '🇳🇱',
                             name: '🌈 RUNTZ 🌈',
-                            farm: '🇺🇸 NO FARM',
+                            farm: '🇳🇱 NO FARM',
                             promoEligible: false,
                             type: 'Weed',
                             image: 'ProductRu.jpg',
