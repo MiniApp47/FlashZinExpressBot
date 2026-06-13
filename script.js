@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '100g', price: 600.00 },
                             ]
                         }, */
-                         {
+                         /* {
                             id: '💎 24K GOLD 💎',
                             flag: '🇳🇱',
                             name: '💎 24K GOLD 💎',
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             promoEligible: false,
                             type: 'Weed',
                             image: 'ProductRu.jpg',
-                             /*video: 'VideoBis.mp4', */
+                             /*video: 'VideoBis.mp4', 
                             description: '🍬 Saveurs sucrées / fruitées \n ✨ Fleurs premium ultra colorées \n 💨 Effet puissant & agréable',
                             tarifs: [
                                 { weight: '4g', price: 50.00 },
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 350.00 },
                                 { weight: '100g', price: 600.00 },
                             ]
-                        },
+                        }, */
                     
                     ]
                 },
