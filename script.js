@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             progressBar.style.width = "100%";
         }
     }, 100);
-
+/* 
 // 2. On attend la fin de l'animation (2.5 secondes ici) pour cacher le loader
     setTimeout(() => {
         if (loader) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             }, 500); // Attend la fin du fondu
         }
-    }, 2600); // 2600ms = 2.5s d'animation + 0.1s de délai
+    }, 2600); // 2600ms = 2.5s d'animation + 0.1s de délai */
 
     // --- CONFIGURATION DES LIENS DE CONTACT ---
     const contactLinks = [
